@@ -22,6 +22,8 @@ function ls(fileStat) {
   const dateFormat = timeDiff < 6 ? 'MMM DD HH:mm' : 'MMM DD  YYYY';
 
   return [
+    fileStat.customFlags ?
+    fileStat.customFlags :
     fileStat.mode ? [
       fileStat.isDirectory() ? 'd' : '-',
       fileStat.mode & 256 ? 'r' : '-',
