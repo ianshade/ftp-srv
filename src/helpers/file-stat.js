@@ -36,7 +36,6 @@ function ls(fileStat) {
       fileStat.mode & 2 ? 'w' : '-',
       fileStat.mode & 1 ? 'x' : '-'
     ].join('') : fileStat.isDirectory() ? 'drwxr-xr-x' : '-rwxr-xr-x',
-    '1',
     fileStat.uid || 1,
     fileStat.gid || 1,
     _.padStart(fileStat.size, 12),
